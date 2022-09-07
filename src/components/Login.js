@@ -2,14 +2,18 @@ import React from 'react'
 import styled from 'styled-components';
 import Button from './Buttons/Button';
 
-
 const Login = (props) => {
   return (
     <Container>
         <Content>
         <CTA>
             <CTALogoOne src="/images/cta-logo-one.svg"></CTALogoOne>
-            <Button width= "500px" bgColor="#0171d2" height= "60px" fontSize= "20px"> Get All Three </Button>
+            <Button width= "500px" bgColor="#075ee6" height= "60px" fontSize= "20px" borderColor="royalblue" hoverColor="blue"> Get All There </Button>
+            <Description>
+                Get Premier Access to Thor Love and Thunder for an additional fee with a Disney+ subscription. As of 
+                28/08/22, the price of Disney+ and Disney Bundle will increase by $1.
+            </Description>
+            <LogoImage src="/images/cta-logo-two.png"/>
         </CTA>
 
         <BgImage/>
@@ -31,7 +35,6 @@ const Container = styled.section `
 const Content = styled.div `
  
     width : 100%;
-    position : relative;
     min-height : 100vh;
     box-sizing : border-box;
     display : flex;
@@ -67,6 +70,19 @@ const CTALogoOne = styled.img`
     display: block;
     width : 100%;
 
+`
+const Description = styled.p `
+    font-size : 17px;
+    letter-spacing : 1.25px;
+    line-height : 1.5;
+    font-weight: 530; 
+`
+
+const LogoImage = styled.img `
+    max-width : 600px;
+    display : inline-block;
+    vertical-align :bottom;
+    width : 100%;
 `
 
 export default Login;
